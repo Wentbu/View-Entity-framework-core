@@ -1,0 +1,197 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Kiosk",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Reports/service-stats": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceAssignmentStat"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceAssignmentStat"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceAssignmentStat"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Reports/usage-stats": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssignmentUsageStat"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssignmentUsageStat"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssignmentUsageStat"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Reports/device-stats": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeviceAssignmentStat"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeviceAssignmentStat"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeviceAssignmentStat"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Reports/refresh-views": {
+      "post": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AssignmentUsageStat": {
+        "type": "object",
+        "properties": {
+          "usageStatus": {
+            "type": "string",
+            "nullable": true
+          },
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DeviceAssignmentStat": {
+        "type": "object",
+        "properties": {
+          "deviceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "deviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignmentCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServiceAssignmentStat": {
+        "type": "object",
+        "properties": {
+          "serviceCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "serviceName": {
+            "type": "string",
+            "nullable": true
+          },
+          "yearCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "monthCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "weekCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
