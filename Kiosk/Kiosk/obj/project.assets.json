@@ -1245,11 +1245,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jaywi\\source\\repos\\Kiosk\\Kiosk\\Kiosk.csproj",
+      "projectUniqueName": "D:\\DATN\\View-Entity-framework-core\\Kiosk\\Kiosk\\Kiosk.csproj",
       "projectName": "Kiosk",
-      "projectPath": "C:\\Users\\jaywi\\source\\repos\\Kiosk\\Kiosk\\Kiosk.csproj",
+      "projectPath": "D:\\DATN\\View-Entity-framework-core\\Kiosk\\Kiosk\\Kiosk.csproj",
       "packagesPath": "C:\\Users\\jaywi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jaywi\\source\\repos\\Kiosk\\Kiosk\\obj\\",
+      "outputPath": "D:\\DATN\\View-Entity-framework-core\\Kiosk\\Kiosk\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
